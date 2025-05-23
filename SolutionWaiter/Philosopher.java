@@ -25,12 +25,14 @@ public class Philosopher extends Thread {
             table.getFork(rightFork);
             table.getFork(leftFork);
 
+            waiter.releasePermission();
+            
             System.out.println("Philosopher " + id + " is eating " + (i + 1));
 
             table.putFork(rightFork);
             table.putFork(leftFork);
 
-            waiter.releasePermission();
+            
         }
     }
 }
