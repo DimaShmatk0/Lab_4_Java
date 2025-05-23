@@ -31,8 +31,6 @@ public class Philosopher extends Thread {
 
             table.putFork(rightFork);
             table.putFork(leftFork);
-
-            
         }
     }
 }
